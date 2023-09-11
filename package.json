@@ -5,12 +5,16 @@
   "keywords": [],
   "version": "0.0.0",
   "scripts": {
-    "build": "npm run build:esm && npm run build:cjs",
+    "build": "npm run build:esm  && npm run build:cjs",
     "build:esm": "tsc --project tsconfig.esm.json",
     "build:cjs": "tsc --project tsconfig.cjs.json",
+    "build.noEmit": "npm run build.noEmit:cjs  && npm run build.noEmit:cjs",
+    "build.noEmit:esm": "tsc --project tsconfig.esm.json --noEmit",
+    "build.noEmit:cjs": "tsc --project tsconfig.cjs.json --noEmit",
     "format": "prettier --write .",
     "format.check": "prettier --check .",
     "lint": "eslint \"src/**/*.ts*\"",
+    "prepare": "husky install"
   },
   "type": "module",
   "main": "./dist/esm/index.js",
@@ -34,6 +38,7 @@
     "@typescript-eslint/eslint-plugin": "6.4.0",
     "@typescript-eslint/parser": "6.4.0",
     "eslint": "8.45.0",
+    "husky": "^8.0.3",
     "prettier": "3.0.1",
     "typescript": "^5.2.2"
   }
