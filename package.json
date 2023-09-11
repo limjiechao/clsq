@@ -1,0 +1,12 @@
+{
+  "name": "clsq",
+  "license": "ISC",
+  "description": "A tiny utility for constructing Qwik `class` strings conditionally.",
+  "keywords": [],
+  "version": "0.0.0",
+  "scripts": {
+  },
+  "devDependencies": {
+    "typescript": "^5.2.2"
+  }
+}
