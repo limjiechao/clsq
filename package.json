@@ -15,7 +15,8 @@
     "format.check": "prettier --check .",
     "lint": "eslint \"src/**/*.ts*\"",
     "prepare": "husky install",
-    "commitlint": "commitlint --edit"
+    "commitlint": "commitlint --edit",
+    "commit": "git-cz"
   },
   "type": "module",
   "main": "./dist/esm/index.js",
@@ -34,12 +35,19 @@
   "files": [
     "./dist"
   ],
+  "config": {
+    "commitizen": {
+      "path": "./commitizen.config.cjs"
+    }
+  },
   "devDependencies": {
     "@commitlint/cli": "^17.7.1",
     "@commitlint/config-conventional": "^17.7.0",
+    "@digitalroute/cz-conventional-changelog-for-jira": "^8.0.1",
     "@types/eslint": "8.44.2",
     "@typescript-eslint/eslint-plugin": "6.4.0",
     "@typescript-eslint/parser": "6.4.0",
+    "commitizen": "^4.3.0",
     "eslint": "8.45.0",
     "husky": "^8.0.3",
     "prettier": "3.0.1",
