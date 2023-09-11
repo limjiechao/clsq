@@ -8,6 +8,8 @@
     "build": "npm run build:esm && npm run build:cjs",
     "build:esm": "tsc --project tsconfig.esm.json",
     "build:cjs": "tsc --project tsconfig.cjs.json",
+    "format": "prettier --write .",
+    "format.check": "prettier --check .",
   },
   "type": "module",
   "main": "./dist/esm/index.js",
@@ -27,6 +29,7 @@
     "./dist"
   ],
   "devDependencies": {
+    "prettier": "3.0.1",
     "typescript": "^5.2.2"
   }
 }
