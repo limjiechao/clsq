@@ -14,7 +14,8 @@
     "format": "prettier --write .",
     "format.check": "prettier --check .",
     "lint": "eslint \"src/**/*.ts*\"",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "commitlint": "commitlint --edit"
   },
   "type": "module",
   "main": "./dist/esm/index.js",
@@ -34,6 +35,8 @@
     "./dist"
   ],
   "devDependencies": {
+    "@commitlint/cli": "^17.7.1",
+    "@commitlint/config-conventional": "^17.7.0",
     "@types/eslint": "8.44.2",
     "@typescript-eslint/eslint-plugin": "6.4.0",
     "@typescript-eslint/parser": "6.4.0",
